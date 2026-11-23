@@ -16,36 +16,36 @@ Built with Laravel, Vue (Inertia), PostgreSQL and Pest.
 
 1. Start Postgres and create the two databases: one for the app and one for the tests.
 
-   ```bash
-   psql -h 127.0.0.1 -U postgres -c "CREATE DATABASE trip_planner;"
-   psql -h 127.0.0.1 -U postgres -c "CREATE DATABASE trip_planner_testing;"
-   ```
+    ```bash
+    psql -h 127.0.0.1 -U postgres -c "CREATE DATABASE trip_planner;"
+    psql -h 127.0.0.1 -U postgres -c "CREATE DATABASE trip_planner_testing;"
+    ```
 
-   The defaults in `.env.example` expect user `postgres` with no password on `127.0.0.1:5432`. If your setup is different, change the `DB_*` values in `.env` after step 3.
+    The defaults in `.env.example` expect user `postgres` with no password on `127.0.0.1:5432`. If your setup is different, change the `DB_*` values in `.env` after step 3.
 
 2. Clone the repo into your Herd folder, so Herd serves it at http://trip-planner.test:
 
-   ```bash
-   cd ~/Herd
-   git clone https://github.com/shanedoug02/trip-planner.git
-   cd trip-planner
-   ```
+    ```bash
+    cd ~/Herd
+    git clone https://github.com/shanedoug02/trip-planner.git
+    cd trip-planner
+    ```
 
 3. Install everything and set up the database:
 
-   ```bash
-   composer setup
-   ```
+    ```bash
+    composer setup
+    ```
 
-   This installs the PHP and Node packages, creates `.env` from `.env.example`, generates the app key, runs the migrations and builds the front end. If it fails at the migrate step, the databases from step 1 don't exist yet.
+    This installs the PHP and Node packages, creates `.env` from `.env.example`, generates the app key, runs the migrations and builds the front end. If it fails at the migrate step, the databases from step 1 don't exist yet.
 
 4. Check that it worked:
 
-   ```bash
-   php artisan app:status
-   ```
+    ```bash
+    php artisan app:status
+    ```
 
-   Both lines should show ✅. Then open http://trip-planner.test.
+    Both lines should show ✅. Then open http://trip-planner.test.
 
 ## Daily use
 
