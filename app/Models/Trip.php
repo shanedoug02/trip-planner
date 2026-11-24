@@ -36,7 +36,8 @@ class Trip extends Model
     protected function casts(): array
     {
         return [
-            'departs_on' => 'date',
+            // A date object in PHP; sent to the front end as "2026-12-21"
+            'departs_on' => 'date:Y-m-d',
         ];
     }
 
