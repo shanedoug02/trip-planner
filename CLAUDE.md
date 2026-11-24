@@ -43,6 +43,8 @@ teaches as we go. I'm new to Laravel.
 - users (+ timezone column)
 - trips: name, destination, departs_on (date), created_by
 - trip_user: trip_id, user_id, role (owner|member)
+    - owner = whoever created the trip. Everyone on a trip can do everything
+      (view, edit, tick off tasks, invite) except cancel the trip: owner only (#15).
 - checklist_templates: user_id (nullable for the default), name
 - template_items: template_id, title, notes, days_before (int), remind_at (time)
 - trip_tasks: trip_id, template_item_id (nullable), title, notes, days_before,
